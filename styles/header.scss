@@ -1,0 +1,55 @@
+@import "colors";
+
+.header {
+}
+
+// hack to use drop shadows
+.header__menu,
+.header__jumbotron {
+  position:relative;
+}
+
+.header__jumbotron {
+  z-index:0;
+}
+
+.header__menu {
+  z-index:1;
+}
+//end of hack
+
+.header__decorator {
+    height:14px;
+    background-color:$primary;
+}
+
+.header__menu {
+  height: 105px;
+  box-shadow:0 4px 16px rgba(0,0,0,0.75);
+  background: url(/res/img_botonera.jpg);
+}
+
+.header__menu__logo {
+    height:100%;
+    display:inline-block;
+    width:240px;
+    background: url(/res/logo.png) no-repeat;
+    background-position:center center;
+}
+
+.header__menu__buttons {
+    display:inline-block;
+}
+
+.header__menu__buttons_item {
+    color:$font-color;
+    font-size:21px;
+}
+
+.header__jumbotron {
+  width:100%;
+  height:454px;
+  background: url(/res/jumbotron.jpg) no-repeat;
+  background-size: cover;
+  background-position:center;
+}

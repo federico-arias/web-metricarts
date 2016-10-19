@@ -1,0 +1,63 @@
+@import "~susy/sass/susy";
+@import "colors";
+
+$susy: (
+  columns:2,
+  gutters: 1/8,
+  math:fluid,
+  container: 960px,
+);
+
+.servicios {
+  font-family:"Raleway", sans-serif;
+  color:$text;
+}
+
+.servicios__header {
+  height:75px;
+  background-image: url(/res/img_botonera.jpg);
+}
+
+.servicios__header__top_decorator {
+  height:11px;
+  background-color: $primary;
+}
+
+.servicios__header__top_right_decorator {
+  height:8px;
+  background-color:$primary;
+  width:70%;
+}
+
+.servicios__header__title {
+  padding-left:205px;
+}
+
+.servicios__header__bottom_right_decorator {
+  height:8px;
+  background-color:$primary;
+}
+
+.servicios__ba__text__title {
+    font-size:24px;
+}
+
+.servicios__ba__text__description {
+    font-size:16px;
+}
+
+@include susy-breakpoint(1024px, 2) {
+
+  .servicios__ba {
+    @include container();
+  }
+
+  .servicios__ba__illustration {
+    @include span(first 1);
+  }
+
+  .servicios__ba__text {
+    @include span(last 1);
+  }
+
+}
