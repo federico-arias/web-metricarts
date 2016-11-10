@@ -1,0 +1,60 @@
+@import "~susy/sass/susy";
+@import "colors";
+
+$susy: (
+  columns:2,
+  gutters: 1/8,
+  math:fluid,
+  container: 960px,
+);
+
+
+.nosotros {
+  font-family:"Raleway", sans-serif;
+  color:$text;
+}
+
+.nosotros__header {
+  margin-top:50px;
+  height:86px;
+  width: 35%;
+  background-image: url(/res/img_botonera.jpg);
+}
+
+.nosotros__header__top_decorator {
+  height:11px;
+  background-color: $gris;
+  opacity: 0.15;
+  width: 90%;
+}
+.nosotros__header__button__decorator{
+    height: 8px;
+    background-color: $quaternary;
+    margin-top: 12px;
+    width: 73%;
+}
+.nosotros__header__title {
+  padding-left:205px;
+  padding-top: 18px;
+}
+.nosotros__text__bajada {
+  font-family:"Raleway", sans-serif;
+  color:$text;
+  padding-top: 40px;
+}
+
+@include susy-breakpoint(1024px, 2) {
+
+  .nosotros__ba {
+    @include container();
+  }
+
+  .nosotros__ba__illustration {
+    @include span(first 1);
+  }
+
+  .nosotros__ba__text {
+    @include span(last 1);
+  }
+
+}
