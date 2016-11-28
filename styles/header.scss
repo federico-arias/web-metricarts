@@ -38,8 +38,37 @@
     background-position:center center;
 }
 
-.header__menu__buttons {
+
+nav.header__menu__buttons {
+	float:right;
+	width:80%;
+	font-family:'Raleway', sans-serif;
+	font-size:21px;
+}
+
+nav.header__menu__buttons ul{
+	list-style-type:none;
+}
+
+nav.header__menu__buttons ul:after {
+	content:' ';
+	clear:both;	
+	display:block;
+}
+
+nav.header__menu__buttons ul li {
+	float:left;
+}
+
+nav.header__menu__buttons ul li a {
     display:inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 22px 42px 45px 42px;
+	overflow:hidden;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
 }
 
 .header__menu__buttons_item {

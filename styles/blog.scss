@@ -1,0 +1,68 @@
+@import "~susy/sass/susy";
+@import "colors";
+
+
+
+.blog {
+  font-family:"Raleway", sans-serif;
+  color:$text;
+}
+
+.blog__header {
+  margin-top:50px;
+  height:86px;
+  width: 35%;
+  background-image: url(/res/img_botonera.jpg);
+}
+
+.blog__header__top_decorator {
+  height:11px;
+  background-color: $gris;
+  opacity: 0.15;
+  width: 90%;
+}
+.blog__header__button__decorator{
+    height: 8px;
+    background-color: $quaternary;
+    margin-top: 12px;
+    width: 73%;
+}
+.blog__header__title {
+  padding-left:205px;
+  padding-top: 18px;
+}
+
+.blog__post {
+	margin-top:66px;
+}
+
+.blog__post__thumbnail {
+	height: 100px;
+	background-image:url('http://placehold.it/200x100');
+}
+
+.blog__post__desc h2 {
+	font-size:16px;
+}
+
+.blog__post__more {
+	text-align:right;
+}
+
+@include nested(4) {
+	.blog__post { 
+		@include container(4);
+	}
+
+	.blog__post__thumbnail {
+		@include span(1 first);
+	}
+
+	.blog__post__desc {
+		@include span(3 last);
+	}
+}
+
+@include susy-breakpoint(1024px, 2) {
+
+}
