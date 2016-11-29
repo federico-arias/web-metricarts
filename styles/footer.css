@@ -1,0 +1,77 @@
+@import "~susy/sass/susy";
+@import "colors";
+
+footer {
+	font-family:'Raleway';
+	font-size:14px;
+	background-image: 
+		linear-gradient(to bottom, 
+						transparent 0%,
+						transparent 93%,
+						cadetblue 93%,
+						cadetblue 94%,
+						transparent 94%),
+		url('http://placehold.it/1904x353');
+	margin-top:86px;
+	padding-top:1px;
+	padding-bottom:35px;
+}
+
+footer,
+footer a, 
+footer a:link {
+	color:white;
+	text-decoration:none;
+}
+
+footer ul,
+footer li {
+	list-style-position:outside;
+	list-style-type:none;
+}
+
+.mini-menus {
+	margin-top:66px;
+}
+
+.mini-menu h2 {
+	font-weight:900;
+	font-size:16px;
+}
+
+.mini-menu ul {
+	margin-top:22px;
+}
+
+.mini-menu li {
+	margin-top:4px;
+}
+
+footer .copyright,
+footer .contacto {
+	font-style:italic;
+	font-size:12px;
+	color:white;
+	text-align:center;
+	margin-top:25px;
+}
+
+
+
+@include nested(6) {
+	.mini-menus {
+		@include container(6);
+	}
+
+	.mini-menus .mini-menu {
+		@include span(1);
+	}
+
+	footer .mini-menus .mini-menu:first-child {
+		@include span(1 first);
+	}
+
+	footer .mini-menus .mini-menu:last-child {
+		@include span(1 last);
+	}
+}

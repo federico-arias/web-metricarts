@@ -1,0 +1,125 @@
+@import "~susy/sass/susy";
+@import "colors";
+
+.contacto {
+  font-family:"Raleway", sans-serif;
+  color:$text;
+}
+
+.contacto__header {
+  margin-top:50px;
+  height:86px;
+  width: 35%;
+  background-image: url(/res/img_botonera.jpg);
+}
+
+.contacto__header__top_decorator {
+  height:11px;
+  background-color: $gris;
+  opacity: 0.15;
+  width: 90%;
+}
+.contacto__header__button__decorator{
+    height: 8px;
+    background-color: $quaternary;
+    margin-top: 12px;
+    width: 73%;
+}
+.contacto__header__title {
+  padding-top: 18px;
+  padding-left:205px;
+}
+
+.contacto__form {
+	margin-top:66px;
+	@include container(2);
+}
+
+.contacto__form__labels {
+	display:none;
+	font-size:12px;
+	font-weight:800;
+}
+
+.contacto__form__inputs {
+	@include span(1 first);
+}
+
+.contacto__form__text {
+	padding-left:35px;
+	box-sizing:border-box;
+	font-size:14px;
+	font-weight:600;
+	@include span(1 last);
+}
+
+
+
+/* HTML Forms Styling */
+.contacto__form textarea,
+.contacto__form input[type=text] {
+	border: 0;
+	border-top:2px solid $quaternary;
+	background-color: lighten($quaternary, 20%);
+	display:block;
+	margin-bottom:10px;
+	width:100%;
+}
+
+.contacto__form input[type=button] {
+	background:none;
+	background: $quaternary;
+	width:80px;
+	color: white;
+	font-family: 'Raleway';
+	text-transform: uppercase;	
+	font-size:11px;
+	font-weight:900;
+	padding:3px;
+	border: 0;
+	cursor:pointer;
+}
+
+.contacto__form input[type=button]:hover {
+	background: darken($quaternary, 10%);
+}
+
+@include nested(2) {
+	.contacto__form__inputs__buttons {
+		@include container(2);
+	}
+	.contacto__form__inputs__buttons input:first-child {
+		@include span(1 first);
+	}
+	.contacto__form__inputs__buttons input:last-child {
+		@include span(1 last);
+	}
+}
+	
+
+@include susy-breakpoint(1024px, 2) {
+
+	@include nested(8) {
+		.contacto__form {
+			@include container(8);
+		}
+
+		.contacto__form__labels {
+			display:block;
+			text-align:right;
+			@include span(1 first);
+			
+			label {
+				display:block;
+			}
+		}
+
+		.contacto__form__inputs {
+			@include span(3);
+		}
+
+		.contacto__form__text {
+			@include span(4 last)
+		}
+	}		
+}

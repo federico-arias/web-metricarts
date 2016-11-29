@@ -1,7 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,600,300italic);
+@import "fonts";
 @import "header";
 @import "servicios";
 @import "nosotros";
+@import "blog";
+@import "clientes";
+@import "contacto";
+@import "footer";
 
 * {
   margin : 0;

@@ -47,20 +47,56 @@ $susy: (
   width: 30%;
 }
 
+.servicios__ba__illustration {
+	background-image: url('/res/img1.png');
+	background-repeat:no-repeat;
+	background-size:contain;
+	height:285px;
+}
+
+.servicios__bi {
+	margin-top:30px;
+}
+
+.servicios__bi__text__title,
 .servicios__ba__text__title {
     font-size:22px;
     padding-top: 20px;
     
 }
 
-.servicios__box__img {
-    padding-top: 20px;
-}
-
+.servicios__bi__text__description, 
 .servicios__ba__text__description {
     font-size:16px;
     font-weight: 800;
     padding-top:30px;
+}
+
+.servicios__bi__text__readmore a:link, 
+.servicios__bi__text__readmore a,
+.servicios__ba__text__readmore a:link, 
+.servicios__ba__text__readmore a {
+	text-decoration:none;
+	font-size:18px;
+	color:inherit;
+}
+
+.servicios__ba__text__readmore {
+	margin-top:5px;
+	text-align:right;
+}
+
+.servicios__bi__text__readmore {
+	margin-top:5px;
+	text-align:left;
+}
+	
+
+.servicios__bi__illustration {
+	background-image: url('/res/img1.png');
+	background-repeat:no-repeat;
+	height:285px;
+	background-size:contain;
 }
 
 @include susy-breakpoint(1024px, 2) {
@@ -77,4 +113,15 @@ $susy: (
     @include span(last 1);
   }
 
+  .servicios__bi {
+	  @include container();
+  }
+
+  .servicios__bi__illustration {
+    @include span(last 1);
+  }
+
+  .servicios__bi__text {
+    @include span(first 1);
+  }
 }
