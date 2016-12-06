@@ -47,6 +47,7 @@
 
 .blog__post__more {
 	text-align:right;
+    color: $terciary;
 }
 
 @include nested(4) {

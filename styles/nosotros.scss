@@ -46,6 +46,31 @@ $susy: (
   color:$text;
   margin-top: 66px;
 }
+.nosotros__images {
+  padding:35px 15px 60px 15px;
+}
+
+.nosotros__imagesb {
+  padding:35px 15px 60px 15px;
+}
+
+.crossRotate {
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+     transition-duration: 1s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+     transition-property: transform;
+}
+
+.crossRotate:hover {
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+     transform: rotateY(180deg);
+}
+
 
 @include susy-breakpoint(1024px, 2) {
 
@@ -53,5 +78,11 @@ $susy: (
     @include container();
   }
 
+  .nosotros__images {
+    @include span(first 1);
+  }
+  .servicios__imagesb {
+    @include span(last 1);
+  }
 
 }

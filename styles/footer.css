@@ -11,8 +11,8 @@ footer {
 						cadetblue 93%,
 						cadetblue 94%,
 						transparent 94%),
-		url('http://placehold.it/1904x353');
-	margin-top:86px;
+		url('/res/footer_img.jpg');
+	margin-top:95px;
 	padding-top:1px;
 	padding-bottom:35px;
 }
@@ -28,6 +28,11 @@ footer ul,
 footer li {
 	list-style-position:outside;
 	list-style-type:none;
+}
+.footer__header__decorator{
+     height:11px;
+     background-color: $terciary;
+     margin-top:12px;
 }
 
 .mini-menus {
@@ -54,6 +59,9 @@ footer .contacto {
 	color:white;
 	text-align:center;
 	margin-top:25px;
+}
+img{
+    padding-top: 5px;
 }
 
 
