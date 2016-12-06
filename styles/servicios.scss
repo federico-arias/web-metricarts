@@ -52,26 +52,48 @@ $susy: (
 	background-repeat:no-repeat;
 	background-size:contain;
 	height:285px;
+    margin-top: 60px;
 }
-
-.servicios__bi {
-	margin-top:30px;
+.servicios__id__illustration {
+	background-image: url('/res/img1.png');
+	background-repeat:no-repeat;
+	background-size:contain;
+	height:285px;
+   margin-top: 60px;
+}
+.servicios__vdi__illustration {
+	background-image: url('/res/img1.png');
+	background-repeat:no-repeat;
+	background-size:contain;
+	height:285px;
+    margin-top: 60px;
+}
+.servicios__ba,
+.servicios__bi,
+.servicios__id,
+.servicios__vdi {
+	margin-top:50px;
 }
 
 .servicios__bi__text__title,
-.servicios__ba__text__title {
-    font-size:22px;
-    padding-top: 20px;
-    
+.servicios__ba__text__title,
+.servicios__id__text__title,
+.servicios__vdi__text__title {
+    font-size:22px; 
 }
 
 .servicios__bi__text__description, 
-.servicios__ba__text__description {
+.servicios__ba__text__description,
+.servicios__id__text__description,
+.servicios__vdi__text__description{
     font-size:16px;
     font-weight: 800;
     padding-top:30px;
 }
-
+.servicios__id__text__readmore a:link,
+.servicios__id__text__readmore a,
+.servicios__vdi__text__readmore a:link,
+.servicios__vdi__text__readmore a,
 .servicios__bi__text__readmore a:link, 
 .servicios__bi__text__readmore a,
 .servicios__ba__text__readmore a:link, 
@@ -80,23 +102,32 @@ $susy: (
 	font-size:18px;
 	color:inherit;
 }
-
+.servicios__id__text__readmore a:hover,
+.servicios__vdi__text__readmore a:hover,
+.servicios__bi__text__readmore a:hover, 
+.servicios__ba__text__readmore a:hover,  {
+	text-decoration:none;
+	font-size:18px;
+	color:$terciary;
+    
+}
+.servicios__id__text__readmore,
 .servicios__ba__text__readmore {
 	margin-top:5px;
 	text-align:right;
 }
-
+.servicios__vdi__text__readmore,
 .servicios__bi__text__readmore {
 	margin-top:5px;
 	text-align:left;
 }
 	
-
 .servicios__bi__illustration {
 	background-image: url('/res/img1.png');
 	background-repeat:no-repeat;
 	height:285px;
 	background-size:contain;
+    margin-top: 60px;
 }
 
 @include susy-breakpoint(1024px, 2) {
@@ -122,6 +153,29 @@ $susy: (
   }
 
   .servicios__bi__text {
+    @include span(first 1);
+  }
+  .servicios__id {
+    @include container();
+  }
+
+  .servicios__id__illustration {
+    @include span(first 1);
+  }
+
+  .servicios__id__text {
+    @include span(last 1);
+  }
+
+  .servicios__vdi {
+	  @include container();
+  }
+
+  .servicios__vdi__illustration {
+    @include span(last 1);
+  }
+
+  .servicios__vdi__text {
     @include span(first 1);
   }
 }

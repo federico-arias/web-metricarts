@@ -44,6 +44,7 @@ nav.header__menu__buttons {
 	width:75%;
 	font-family:'Raleway', sans-serif;
 	font-size:21px;
+    font-color:#005f71;
 }
 
 nav.header__menu__buttons ul{
@@ -72,7 +73,7 @@ nav.header__menu__buttons ul li::after {
 
 nav.header__menu__buttons ul li a {
     display:inline-block;
-    color: #f2f2f2;
+    color: #005f71;
     text-align: center;
     padding: 22px 42px 45px 42px;
 	overflow:hidden;
