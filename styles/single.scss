@@ -1,0 +1,46 @@
+@import "~susy/sass/susy";
+@import "colors";
+
+$susy: (
+  columns: 6,
+  gutters: 1/8,
+  math:fluid,
+  container: 960px,
+);
+
+.single {
+  font-family:"Raleway", sans-serif;
+  color:$text;
+  margin-top: 50px;
+}
+
+.single__illustration {
+	background-image: url('/res/img1.png');
+	background-repeat:no-repeat;
+	background-size:contain;
+	height:785px;
+    padding-top: 30px;
+}
+
+.single__text__description {
+    font-size:16px;
+    font-weight: 800;
+    margin-top:90px;  
+}
+
+@include susy-breakpoint(1024px, 2) {
+
+@include nested(6) {
+  .single {
+    @include container(6);
+  }
+
+.single__text__description {
+    @include span(4 first);
+  }
+
+.single__illustration {
+    @include span(2 last);
+  }
+}
+}
