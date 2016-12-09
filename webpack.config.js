@@ -1,20 +1,20 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var extractCSS = new ExtractTextPlugin('target/style.css');
+var extractHTML = new ExtractTextPlugin('target/index.html');
 
 module.exports = {
-	entry: './main.js',
+	entry: './src/main.js',
 	output: {
-		filename: 'bundle.js',
+		publicPath:"/wp-content/themes/theme/",
+		filename: 'target/bundle.js',
 	},
 	module: {
 		loaders: [
 			{
-				test: /\.(eot|svg|ttf|woff|woff2)$/,
-				loader: 'file?name=/fonts2/[name].[ext]'
-			},
-			{
 				test: /\.(jpe?g|png|gif|svg)$/i,
+				exclude: /(node_modules|bower_components)/,
 				loaders: [
-					'file?hash=sha512&digest=hex&name=[hash].[ext]',
+					'file?hash=sha512&digest=hex&name=target/images/[hash].[ext]',
 					'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
 				]
 			},
@@ -27,12 +27,19 @@ module.exports = {
 				}
 			},
 			{
+			    test: /index\.html$/, 
+				loader: "file-loader?name=target/[name].[ext]!extract-loader!html-loader"
+			},
+			{
 				test: /main\.scss$/,
-				loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
+				loader: extractCSS.extract("style-loader", "css-loader!sass-loader")
 			}
 		]
 	},
 	plugins: [
-        new ExtractTextPlugin("style.css")
+		extractCSS
     ]
 };
+
+/*
+*/

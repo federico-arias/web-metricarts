@@ -11,7 +11,7 @@ footer {
 						cadetblue 93%,
 						cadetblue 94%,
 						transparent 94%),
-		url('/res/footer.jpg');
+		url('../res/footer.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	margin-top:95px;
