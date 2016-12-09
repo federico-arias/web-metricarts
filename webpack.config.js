@@ -1,3 +1,5 @@
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 module.exports = {
 	entry: './main.js',
 	output: {
@@ -5,10 +7,6 @@ module.exports = {
 	},
 	module: {
 		loaders: [
-			{
-				test: /\.scss$/,
-				loader: 'style!css!sass!'
-			},
 			{
 				test: /\.(eot|svg|ttf|woff|woff2)$/,
 				loader: 'file?name=/fonts2/[name].[ext]'
@@ -27,7 +25,14 @@ module.exports = {
 				query: {
 					presets: ['es2015' ]
 				}
+			},
+			{
+				test: /main\.scss$/,
+				loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
 			}
 		]
-	}
+	},
+	plugins: [
+        new ExtractTextPlugin("style.css")
+    ]
 };
