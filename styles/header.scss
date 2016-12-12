@@ -82,6 +82,16 @@ nav.header__menu__buttons ul li a {
     font-size: 17px;
 }
 
+nav.header__menu__buttons ul li a:hover {
+    display:inline-block;
+    color: #ff9e0f;
+    text-align: center;
+    padding: 22px 42px 45px 42px;
+	overflow:hidden;
+    text-decoration: none;
+    transition: 0.5s;
+    font-size: 17px;
+}
 .header__menu__buttons_item {
     color:$font-color;
     font-size:21px;

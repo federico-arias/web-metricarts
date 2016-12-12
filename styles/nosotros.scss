@@ -54,39 +54,30 @@ $susy: (
   margin-bottom: 45px;
 }
 .nosotros__images {
-  padding:10px 15px 60px 15px;
-  
+
+}
+
+.nosotros__imagesa {
+ float: left;
+ 
 }
 
 .nosotros__imagesb {
-  padding:10px 15px 60px 15px;
-}
-
-.crossRotate {
-    -webkit-transition-duration: 1s;
-    -moz-transition-duration: 1s;
-    -o-transition-duration: 1s;
-     transition-duration: 1s;
-    -webkit-transition-property: -webkit-transform;
-    -moz-transition-property: -moz-transform;
-    -o-transition-property: -o-transform;
-     transition-property: transform;
-}
-
-.crossRotate:hover {
-    -webkit-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-     transform: rotateY(180deg);
+ padding-left: 55%;
 }
 
 
 @include susy-breakpoint(1024px, 2) {
 
-  .nosotros__text {
+  .nosotros__text{
     @include container();
   }
 
   .nosotros__images {
+    @include container();
+  }
+
+  .nosotros__imagesa {
     @include span(first 1);
   }
   .servicios__imagesb {
