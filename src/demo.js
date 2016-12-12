@@ -1,9 +1,4 @@
-/**
- * Do the clicking stuff
- *
- */
-
-(function() {
+var flipCard = function () {
   var cards = document.querySelectorAll(".card.effect__click");
   for ( var i  = 0, len = cards.length; i < len; i++ ) {
     var card = cards[i];
@@ -16,15 +11,6 @@
       c.contains("flipped") === true ? c.remove("flipped") : c.add("flipped");
     });
   }
-})();
-
-/**
- * Do the random stuff
- *
- */
-
-(function() {
-
   // cache vars
   var cards = document.querySelectorAll(".card.effect__random");
   var timeMin = 1;
@@ -57,5 +43,6 @@
   function randomNum( min, max ) {
     return Math.random() * (max - min) + min;
   }
+}
 
-})();
+module.exports = {foobar:flipCard};

@@ -1,25 +1,27 @@
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var extractCSS = new ExtractTextPlugin('target/style.css');
+var extractHTML = new ExtractTextPlugin('target/index.html');
+
 module.exports = {
-	entry: './main.js',
+	entry: './src/main.js',
 	output: {
-		filename: 'bundle.js',
+		//publicPath:"/wp-content/themes/theme/",
+		filename: 'target/bundle.js',
 	},
 	module: {
 		loaders: [
 			{
-				test: /\.scss$/,
-				loader: 'style!css!sass!'
-			},
-			{
-				test: /\.(eot|svg|ttf|woff|woff2)$/,
-				loader: 'file?name=/fonts2/[name].[ext]'
-			},
-			{
 				test: /\.(jpe?g|png|gif|svg)$/i,
+				exclude: /(node_modules|bower_components)/,
 				loaders: [
-					'file?hash=sha512&digest=hex&name=[hash].[ext]',
+					'file?hash=sha512&digest=hex&name=target/images/[hash].[ext]',
 					'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
 				]
 			},
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                loader: 'file?name=target/fonts/[name].[ext]'
+            },
 			{
 				test: /\.js?$/,
 				exclude: /(node_modules|bower_components)/,
@@ -27,7 +29,20 @@ module.exports = {
 				query: {
 					presets: ['es2015' ]
 				}
+			},
+			{
+			    test: /index\.html$/, 
+				loader: extractHTML.extract("html-loader")
+			},
+			{
+				test: /\.scss$/,
+				loader: extractCSS.extract("style-loader", "css-loader!sass-loader")
 			}
 		]
-	}
+	},
+	plugins: [
+		extractCSS,
+		extractHTML
+    ]
 };
+

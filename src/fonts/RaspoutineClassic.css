@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'RaspoutineClassic';
+  src: url('./RaspoutineClassic.eot');
+  src: url('./RaspoutineClassic.woff2') format('woff2'),
+       url('./RaspoutineClassic.woff') format('woff'),
+       url('./RaspoutineClassic.ttf') format('truetype'),
+       url('./RaspoutineClassic.svg#RaspoutineClassic') format('svg'),
+       url('./RaspoutineClassic.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

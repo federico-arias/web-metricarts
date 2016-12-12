@@ -26,7 +26,7 @@
 .header__menu {
   height: 105px;
   box-shadow:0 4px 16px rgba(0,0,0,0.75);
-  background: url(/res/img_botonera.jpg);
+  background: url(../res/img_botonera.jpg);
 }
 
 .header__menu__logo {
@@ -34,7 +34,7 @@
     display:inline-block;
     width:240px;
     padding-left: 30px;
-    background: url(/res/logo.png) no-repeat;
+    background: url(../res/logo.png) no-repeat;
     background-position:center center;
 }
 
@@ -100,14 +100,14 @@ nav.header__menu__buttons ul li a:hover {
 .header__jumbotron {
   width:100%;
   height:454px;
-  background: url(/res/jumbotron.jpg) no-repeat;
+  background: url(../res/jumbotron.jpg) no-repeat;
   background-size: cover;
   background-position:center;
 }
 .header__jumbotron__single {
   width:100%;
   height:280px;
-  background: url(/res/jumbotronsingle.jpg) no-repeat;
+  background: url(../res/jumbotronsingle.jpg) no-repeat;
   background-size: cover;
   background-position:center;
 }

@@ -4,3 +4,6 @@ bundle.min.js
 *.swp
 *.db
 *.ini
+target
+wordpress-theme/target
+wordpress-theme/theme.zip

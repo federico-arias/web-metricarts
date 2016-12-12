@@ -10,7 +10,7 @@
   margin-top:50px;
   height:86px;
   width: 35%;
-  background-image: url(/res/img_botonera.jpg);
+  background-image: url(../res/img_botonera.jpg);
 }
 
 .contacto__header__top_decorator {
@@ -26,6 +26,7 @@
     width: 73%;
 }
 .contacto__header__title {
+  font-family: 'RaspoutineClassic', 'Raleway', sans-serif;
   padding-top: 18px;
   padding-left:205px;
 }
