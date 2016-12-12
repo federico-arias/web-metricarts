@@ -1,11 +1,11 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var extractCSS = new ExtractTextPlugin('target/style.css');
-var extractHTML = new ExtractTextPlugin('target/indexe.html');
+var extractHTML = new ExtractTextPlugin('target/index.html');
 
 module.exports = {
 	entry: './src/main.js',
 	output: {
-		publicPath:"/wp-content/themes/theme/",
+		//publicPath:"/wp-content/themes/theme/",
 		filename: 'target/bundle.js',
 	},
 	module: {
@@ -18,6 +18,10 @@ module.exports = {
 					'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
 				]
 			},
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                loader: 'file?name=target/fonts/[name].[ext]'
+            },
 			{
 				test: /\.js?$/,
 				exclude: /(node_modules|bower_components)/,
@@ -31,7 +35,7 @@ module.exports = {
 				loader: extractHTML.extract("html-loader")
 			},
 			{
-				test: /main\.scss$/,
+				test: /\.scss$/,
 				loader: extractCSS.extract("style-loader", "css-loader!sass-loader")
 			}
 		]
@@ -42,5 +46,3 @@ module.exports = {
     ]
 };
 
-/*
-*/

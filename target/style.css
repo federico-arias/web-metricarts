@@ -39,14 +39,14 @@ src: local('Raspoutine Classic'), url('../fonts/RaspoutineClassic_TB.woff') form
 .header__menu {
   height: 105px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.75);
-  background: url(/wp-content/themes/theme/target/images/c43c318d81716c7d84fffd75d1c57d5c.jpg); }
+  background: url(target/images/c43c318d81716c7d84fffd75d1c57d5c.jpg); }
 
 .header__menu__logo {
   height: 100%;
   display: inline-block;
   width: 240px;
   padding-left: 30px;
-  background: url(/wp-content/themes/theme/target/images/32cdebd8bbf9a976562f410024a20481.png) no-repeat;
+  background: url(target/images/32cdebd8bbf9a976562f410024a20481.png) no-repeat;
   background-position: center center; }
 
 nav.header__menu__buttons {
@@ -94,14 +94,14 @@ nav.header__menu__buttons ul li a {
 .header__jumbotron {
   width: 100%;
   height: 454px;
-  background: url(/wp-content/themes/theme/target/images/c189e4f47eff645dc77f87b21c32ac02.jpg) no-repeat;
+  background: url(target/images/c189e4f47eff645dc77f87b21c32ac02.jpg) no-repeat;
   background-size: cover;
   background-position: center; }
 
 .header__jumbotron__single {
   width: 100%;
   height: 280px;
-  background: url(/wp-content/themes/theme/target/images/5c01bc06b2db4429ed1a5610f7013fe9.jpg) no-repeat;
+  background: url(target/images/5c01bc06b2db4429ed1a5610f7013fe9.jpg) no-repeat;
   background-size: cover;
   background-position: center; }
 
@@ -111,7 +111,7 @@ nav.header__menu__buttons ul li a {
   margin-top: 50px; }
 
 .single__illustration {
-  background-image: url(/wp-content/themes/theme/target/images/2303a4194913b8546aa810ccba23cd82.png);
+  background-image: url(target/images/2303a4194913b8546aa810ccba23cd82.png);
   background-repeat: no-repeat;
   background-size: contain;
   height: 785px;
@@ -146,7 +146,7 @@ nav.header__menu__buttons ul li a {
 
 .servicios__header {
   height: 100px;
-  background-image: url(/wp-content/themes/theme/target/images/c43c318d81716c7d84fffd75d1c57d5c.jpg); }
+  background-image: url(target/images/c43c318d81716c7d84fffd75d1c57d5c.jpg); }
 
 .servicios__header__top_decorator {
   height: 11px;
@@ -174,21 +174,21 @@ nav.header__menu__buttons ul li a {
   width: 30%; }
 
 .servicios__ba__illustration {
-  background-image: url(/wp-content/themes/theme/target/images/2303a4194913b8546aa810ccba23cd82.png);
+  background-image: url(target/images/2303a4194913b8546aa810ccba23cd82.png);
   background-repeat: no-repeat;
   background-size: contain;
   height: 285px;
   margin-top: 60px; }
 
 .servicios__id__illustration {
-  background-image: url(/wp-content/themes/theme/target/images/2303a4194913b8546aa810ccba23cd82.png);
+  background-image: url(target/images/2303a4194913b8546aa810ccba23cd82.png);
   background-repeat: no-repeat;
   background-size: contain;
   height: 285px;
   margin-top: 60px; }
 
 .servicios__vdi__illustration {
-  background-image: url(/wp-content/themes/theme/target/images/2303a4194913b8546aa810ccba23cd82.png);
+  background-image: url(target/images/2303a4194913b8546aa810ccba23cd82.png);
   background-repeat: no-repeat;
   background-size: contain;
   height: 285px;
@@ -245,7 +245,7 @@ nav.header__menu__buttons ul li a {
   text-align: left; }
 
 .servicios__bi__illustration {
-  background-image: url(/wp-content/themes/theme/target/images/2303a4194913b8546aa810ccba23cd82.png);
+  background-image: url(target/images/2303a4194913b8546aa810ccba23cd82.png);
   background-repeat: no-repeat;
   height: 285px;
   background-size: contain;
@@ -325,7 +325,7 @@ nav.header__menu__buttons ul li a {
   margin-top: 50px;
   height: 86px;
   width: 35%;
-  background-image: url(/wp-content/themes/theme/target/images/c43c318d81716c7d84fffd75d1c57d5c.jpg); }
+  background-image: url(target/images/c43c318d81716c7d84fffd75d1c57d5c.jpg); }
 
 .nosotros__header__top_decorator {
   height: 11px;
@@ -403,7 +403,7 @@ nav.header__menu__buttons ul li a {
   margin-top: 50px;
   height: 86px;
   width: 35%;
-  background-image: url(/wp-content/themes/theme/target/images/c43c318d81716c7d84fffd75d1c57d5c.jpg); }
+  background-image: url(target/images/c43c318d81716c7d84fffd75d1c57d5c.jpg); }
 
 .blog__header__top_decorator {
   height: 11px;
@@ -465,7 +465,7 @@ nav.header__menu__buttons ul li a {
   margin-top: 50px;
   height: 86px;
   width: 35%;
-  background-image: url(/wp-content/themes/theme/target/images/c43c318d81716c7d84fffd75d1c57d5c.jpg); }
+  background-image: url(target/images/c43c318d81716c7d84fffd75d1c57d5c.jpg); }
 
 .clientes__header__top_decorator {
   height: 11px;
@@ -492,7 +492,7 @@ nav.header__menu__buttons ul li a {
   margin-top: 66px; }
 
 .clientes__logos {
-  background-image: url(/wp-content/themes/theme/target/images/820972cfa02aa0297a97ed60e1340b68.png);
+  background-image: url(target/images/820972cfa02aa0297a97ed60e1340b68.png);
   background-repeat: no-repeat;
   background-size: contain;
   height: 500px; }
@@ -514,7 +514,7 @@ nav.header__menu__buttons ul li a {
   margin-top: 50px;
   height: 86px;
   width: 35%;
-  background-image: url(/wp-content/themes/theme/target/images/c43c318d81716c7d84fffd75d1c57d5c.jpg); }
+  background-image: url(target/images/c43c318d81716c7d84fffd75d1c57d5c.jpg); }
 
 .contacto__header__top_decorator {
   height: 11px;
@@ -635,7 +635,7 @@ nav.header__menu__buttons ul li a {
 footer {
   font-family: 'Raleway';
   font-size: 14px;
-  background-image: linear-gradient(to bottom, transparent 0%, transparent 93%, cadetblue 93%, cadetblue 94%, transparent 94%), url(/wp-content/themes/theme/target/images/c7a813bdbf8d8b8e4ccd42aa7a1bba8b.jpg);
+  background-image: linear-gradient(to bottom, transparent 0%, transparent 93%, cadetblue 93%, cadetblue 94%, transparent 94%), url(target/images/c7a813bdbf8d8b8e4ccd42aa7a1bba8b.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: 95px;
@@ -711,3 +711,9 @@ footer .mini-menus .mini-menu:last-child {
   padding: 0; }
 
 /* BEM convention */
+@font-face {
+  font-family: 'RaspoutineClassic';
+  src: url(target/fonts/RaspoutineClassic.eot);
+  src: url(target/fonts/RaspoutineClassic.woff2) format("woff2"), url(target/fonts/RaspoutineClassic.woff) format("woff"), url(target/fonts/RaspoutineClassic.ttf) format("truetype"), url(target/images/3563f2829289341cbe2842285aacb306.svg#RaspoutineClassic) format("svg"), url(target/fonts/RaspoutineClassic.eot?#iefix) format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
