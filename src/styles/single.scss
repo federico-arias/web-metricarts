@@ -13,13 +13,60 @@ $susy: (
   color:$text;
   margin-top: 40px;
 }
-
+.single__sidebar {
+    background-color: $terciary;
+    height:100%;
+    width: 120px;
+}
+.single__etiqueta {
+    background-color: $primary;
+    height:14px;
+    width: auto;
+    margin: 8px 8px 8px 8px;
+    padding: 4px 4px 4px 4px;
+    font-size: 12px; 
+    color: #fff; 
+    text-align: center;
+}
+.single__sidebar__title {
+    Padding: 15px 5px;
+    color: $secondary;
+    text-align: center;
+    font-size: 18px;
+    font-weight:500; 
+}
+.single__sidebar__decorator {
+    background-color: $quaternary;
+    height:8px;
+    width: 100%;
+}
+.single__sidebar__decorator__up {
+    background-color: $quaternary;
+    height:2px;
+    width: 100%;
+}
+.single__icons{
+    display: inline;
+    padding-top: 15px;
+    height: 130px;
+    padding-left: 38%;
+}
+    
 .single__illustration {
-	background-image: url('../res/img1.png');
+	background-image: url('/res/single_image.jpg');
 	background-repeat:no-repeat;
-	background-size:contain;
-	height:400px;
+	height:350px;
+    width: 700px;
     padding-top: 30px;
+    padding-bottom: 15px;
+}
+.single__illustration {
+	background-image: url('/res/single_image.jpg');
+	background-repeat:no-repeat;
+	height:350px;
+    width: 700px;
+    padding-top: 30px;
+    padding-bottom: 15px;
 }
 
 .single__text__description {
@@ -30,19 +77,24 @@ $susy: (
 .single__text__title {
     Padding: 15px 5px;
 }
-@include susy-breakpoint(1024px, 2) {
-
-@include nested(6) {
-  .single {
-    @include container(6);
-  }
-
-.single__text__description {
-    @include span(4 first);
-  }
-
-.single__illustration {
-    @include span(2 last);
-  }
+.single__text__title {
+    Padding: 15px 5px;
 }
+@include susy-breakpoint(1024px, 3) {
+
+  @include nested(3) {
+	.single {
+        @include container();
+  }
+  .single__illustration {
+    @include span(2 firts);
+  }
+  
+  .single__sidebar {
+      @include span(1 last)
+  }
+  }
+  .single__text__description {
+    @include span(3);
+  }
 }
