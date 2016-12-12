@@ -1,5 +1,3 @@
-mkdir target
-cp -r ../target/images target/
-cp ../style.css .
+cp -r ../target/* target/
 rm theme.zip
 zip -r theme.zip * -x make.sh

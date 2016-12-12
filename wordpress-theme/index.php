@@ -298,14 +298,14 @@
 		</div>
 	</div>
 	<div class="contacto">
-		<p>Nueva Tajamar 555 Oficina 1501 / Las Condes - Santiago - Chile  <img src="/res/chile.png"></p> 
-		<p>Calle Miguel Dasso 134, Oficina 201, San Isidro - Lima - Perú  <img src="/res/peru.png"></p> 
-		<p>Marbella, Plaza New York, piso 1, oficina 101, Panama  <img src="/res/panama.png"></p> 
+		<p>Nueva Tajamar 555 Oficina 1501 / Las Condes - Santiago - Chile  <img src="/wp-content/themes/theme/target/images/d039da60612641fa572d26f1a2b19f0a.png"></p> 
+		<p>Calle Miguel Dasso 134, Oficina 201, San Isidro - Lima - Perú  <img src="/wp-content/themes/theme/target/images/b2eaf1f00919c3c5687d1d986a83c942.png"></p> 
+		<p>Marbella, Plaza New York, piso 1, oficina 101, Panama  <img src="/wp-content/themes/theme/target/images/988c93ea90808e7d9693679059eb62d2.png"></p> 
         <br>
-		<p>Phone (56) (2) 2948 96 81 / (51) (1) 641 92 07 / (507) 65338150 / contacto@metricarts.com</p>
+		<p>Teléfono (56) (2) 2948 96 81 / (51) (1) 641 92 07 / (507) 65338150 / contacto@metricarts.com</p>
 	</div>
 	<div class="copyright">
-		<p>Copyright © 2016 Metric Arts, Inc.</p>
+		<p>© 2016 Metric Arts, Inc.</p>
 		<p>Todos los derechos reservados.</p>
 	</div>
 </footer>

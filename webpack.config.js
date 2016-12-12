@@ -1,6 +1,6 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var extractCSS = new ExtractTextPlugin('target/style.css');
-var extractHTML = new ExtractTextPlugin('target/index.html');
+var extractHTML = new ExtractTextPlugin('target/indexe.html');
 
 module.exports = {
 	entry: './src/main.js',
@@ -28,7 +28,7 @@ module.exports = {
 			},
 			{
 			    test: /index\.html$/, 
-				loader: "file-loader?name=target/[name].[ext]!extract-loader!html-loader"
+				loader: extractHTML.extract("html-loader")
 			},
 			{
 				test: /main\.scss$/,
@@ -37,7 +37,8 @@ module.exports = {
 		]
 	},
 	plugins: [
-		extractCSS
+		extractCSS,
+		extractHTML
     ]
 };
 
