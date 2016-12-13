@@ -6,7 +6,16 @@ $susy: (
   gutters: 1/8,
   math:fluid,
   container: 960px,
+  debug:(image:show),
 );
+
+.header__jumbotron__single {
+  width:100%;
+  height:280px;
+  background: url(/res/jumbotronsingle.jpg) no-repeat;
+  background-size: cover;
+  background-position:center;
+}
 
 .single {
   font-family:"Raleway", sans-serif;
@@ -16,9 +25,11 @@ $susy: (
 .single__sidebar {
     background-color: $terciary;
     height:100%;
-    width: 120px;
+    width: 20%;
+    float: right;
+    margin-bottom:20px;
 }
-.single__etiqueta {
+.single__post {
     background-color: $primary;
     height:14px;
     width: auto;
@@ -56,30 +67,26 @@ $susy: (
 	background-image: url('/res/single_image.jpg');
 	background-repeat:no-repeat;
 	height:350px;
-    width: 700px;
+    width: 25%;
     padding-top: 30px;
-    padding-bottom: 15px;
-}
-.single__illustration {
-	background-image: url('/res/single_image.jpg');
-	background-repeat:no-repeat;
-	height:350px;
-    width: 700px;
-    padding-top: 30px;
-    padding-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .single__text__description {
     font-size:16px;
     font-weight: 800;
-    margin-top:10px;  
+    margin-top:10px;
+    padding-right: 40px; 
 }
+.single__text__date {
+    Padding: 15px 5px;
+    font-size: 12px;
+}
+
 .single__text__title {
     Padding: 15px 5px;
 }
-.single__text__title {
-    Padding: 15px 5px;
-}
+
 @include susy-breakpoint(1024px, 3) {
 
   @include nested(3) {
@@ -93,8 +100,5 @@ $susy: (
   .single__sidebar {
       @include span(1 last)
   }
-  }
-  .single__text__description {
-    @include span(3);
   }
 }
