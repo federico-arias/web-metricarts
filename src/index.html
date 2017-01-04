@@ -3,50 +3,61 @@
 <meta charset="utf-8" />
 <head>
   <title>MetricArts - Inteligencia de negocios</title>
+ 
+ <script src="js/jquery-2.1.1.min.js"></script>
+ <script src="js/jquery.combinedScroll.js"></script>
+ <script src="js/jquery.scroll.svg.js"></script>
 </head>
-
+ 
 <body>
-
-<div class="header">
+<div id="inicio" class="header">
+  
+  <div class="header__menu page-navigation">
   <div class="header__decorator">
-  </div>
-  <div class="header__menu">
-        <div class="header__menu__logo">
-        </div>
+  </div>  
+    <div class="header__menu__logo">
+      </div> 
         <nav class="header__menu__buttons">
 			<ul>
-				<li><a href="#">Inicio</a></li>
-				<li><a href="#">Qué hacemos </a></li>
-				<li><a href="#">Quiénes somos</a></li>
-				<li><a href="#">Blog</a></li>
-				<li><a href="#">Clientes</a></li>
-				<li><a href="#">Contacto</a></li>
+				<li><a href="#inicio">Inicio</a></li>
+				<li><a href="#hacemos">Qué hacemos </a></li>
+				<li><a href="#quienes">Quiénes somos</a></li>
+				<li><a href="#blog">Blog</a></li>
+				<li><a href="#clientes">Clientes</a></li>
+				<li><a href="#contacto">Contacto</a></li>
 			</ul>
 
         </nav>
   </div>
-  <div class="header__jumbotron">
-  </div>
+  
+  
+  
 </div>
+<div class="header__jumbotron">
+  </div>
 
 <!--************SERVICIOS************-->
-
-<div class="servicios">
+<div id="hacemos" class="servicios">
 	<div class="servicios__header">
 		<div class="servicios__header__top_decorator">
 		</div>
 		<div class="servicios__header__top_right_decorator">
 		</div>
 		<div class="servicios__header__title">
-			<h1>Servicios</h1>
+			<h1 >Servicios</h1>
 		</div>
 		<div class="servicios__header__bottom_right_decorator">
 		</div>
 	</div>
+  
 	<div class="servicios__ba">
 		<div class="servicios__ba__illustration">
-            <img src="res/business_analytics.png">
+               <div id="target">
+		<div class="wrap">
+			<object id="analytics" data="svg/caballito.svg" type="image/svg+xml"></object>
 		</div>
+ 	</div>
+        </div>
 		<div class="servicios__ba__text">
 			<div class="servicios__ba__text__title">
 				<h1>Business Analytics</h1>
@@ -79,7 +90,11 @@
 			</div>
 		</div>
 		<div class="servicios__bi__illustration">
-            <img src="res/estrategia_bi.gif">
+            <div id="target">
+		<div class="wrap">
+			<object id="business" data="svg/business.svg" type="image/svg+xml"></object>
+		</div>
+ 	</div> 
 		</div>
 	</div>
     <div class="servicios__id">
@@ -98,7 +113,11 @@
 			</div>
 		</div>
 		<div class="servicios__id__illustration">
-         <img src="res/datawarehouse.png">
+        <div id="target">
+		<div class="wrap">
+			<object id="datawarehouse" data="svg/datawarehouse.svg" type="image/svg+xml"></object>
+		</div>
+ 	</div> 
 		</div>
 	</div>
     <div class="servicios__vdi">
@@ -114,15 +133,19 @@
             </br>
 			<div class="servicios__vdi__text__readmore">
 				<p><a href="#">Leer más...</a></p>
-			</div>np
+			</div>
 		</div>
 		<div class="servicios__vdi__illustration">
-            <img src="res/visualizacion_info.png">
+        <div id="target">
+		<div class="wrap">
+			<object id="visualizacion" data="svg/visualizacion.svg" type="image/svg+xml"></object>
 		</div>
+ 	</div> 
+	  </div>
 	</div>
 </div>
 
-<div class="nosotros">
+<div id="quienes" class="nosotros">
 	<div class="nosotros__header">
 		<div class="nosotros__header__top_decorator">
 		</div>
@@ -168,9 +191,7 @@
      </div>
     </div>
     </div>
-
-
-<div class="blog">
+<div  id="blog" class="blog">
 	<div class="blog__header">
 		<div class="blog__header__top_decorator">
 		</div>
@@ -202,6 +223,7 @@
 		<div class="blog__post__more">
 			<a href="#">Ver más</a>
 		</div>
+        <div id="clientes"></div>
 	</div>
 </div>
 <div class="clientes">
@@ -220,11 +242,11 @@
 	<div class="clientes__logos">
 	</div>
 </div>
-<div class="contacto">
+<div  id="contacto" class="contacto">
 	<div class="contacto__header">
 		<div class="contacto__header__top_decorator">
 		</div>
-		<div class="contacto__header__title">
+		<div  class="contacto__header__title">
 			<h1>Contacto</h1>
 		</div>  
 
@@ -310,8 +332,8 @@
 		<div class="mini-menu">
 			<h2>Holding</h2>
 			<ul>
-				<li><a href="#">ProcessArts</a></li>
-				<li><a href="#">MetricLearning</a></li>
+				<li><a href="http://www.processarts.cl/">ProcessArts</a></li>
+				<li><a href="http://www.metriclearning.cl/">MetricLearning</a></li>
 				<li><a href="#">Data Science Spa</a></li>
 			</ul>
 		</div>
@@ -331,6 +353,45 @@
 
 <script src="bundle.js"></script>
 <!-- demo js -->
-<script src="js/demo.js"></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+ 
+  // Hook up the current state to the nav bar
+  $('.page-navigation').onePageNav();
+  
+});
+	
+$(window).load(function () {
+
+	$('#analytics').ScrollSvg({
+		startSlack: 300,
+		stroke: '#fff',
+		transitionDuration: '4s',
+        strokeWidth: '2'
+	});
+    $('#datawarehouse').ScrollSvg({
+		startSlack: 300,
+		stroke: '#fff',
+		transitionDuration: '4s',
+        strokeWidth: '2'
+	});
+    $('#business').ScrollSvg({
+		startSlack: 300,
+		stroke: '#fff',
+		transitionDuration: '4s',
+        strokeWidth: '2'
+	});
+    $('#visualizacion').ScrollSvg({
+		startSlack: 300,
+		stroke: '#fff',
+		transitionDuration: '4s',
+        strokeWidth: '2'
+	});
+
+
+});
+</script>
+
 </body>
 </html>
