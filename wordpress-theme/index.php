@@ -140,15 +140,31 @@
     </div>
         <div class="nosotros__decorator__text">
      </div> 
-    <div class="nosotros__text">
-    <div class="nosotros__images">  
-        <img class="crossRotate" src="res/img_jaime.jpg">
-     </div>
-     <div class="nosotros__imagesb">
-        <img class="crossRotate" src="res/img_pato.jpg">
+	<div class="cards">
+		<div class="nosotros__images">
+			<div class="nosotros__imagesa">
+				<div class="card effect__hover">
+					<div class="card__front">
+						<img src="target/images/5fa03b91a4670d2ac47bc31c1f0c713b.jpg"> </img>
+					</div>
+					<div class="card__back">
+						<img src="target/images/3a5bb5fa2bdb4bda299b8309521811c7.jpg"> </img>
+					</div>
+				</div>
+			</div>
+			<div class="nosotros__imagesb">
+				<div class="card effect__hover">
+					<div class="card__front">
+						<img src="target/images/4f27b953806bd40fe2421506acb10730.jpg"><img>
+					</div>
+					<div class="card__back">
+						<img src="target/images/589140207b350ae1289752ef5d3a5d6c.jpg"> </img>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-    </div>
-</div>     
+</div>
 
 <div id="blog" class="blog">
 	<div class="blog__header">

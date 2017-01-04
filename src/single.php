@@ -1,24 +1,5 @@
 	<?php get_header(); ?>
-<div class="header">
-  <div class="header__decorator">
-  </div>
-  <div class="header__menu">
-        <div class="header__menu__logo">
-        </div>
-        <nav class="header__menu__buttons">
-			<ul>
-				<li><a href="#servicios">Qué hacemos </a></li>
-				<li><a href="#nosotros">Quiénes somos</a></li>
-				<li><a href="#blog">Blog</a></li>
-				<li><a href="#clientes">Clientes</a></li>
-				<li><a href="#contacto">Contacto</a></li>
-			</ul>
 
-        </nav>
-  </div>
-  <div class="header__jumbotron__single">
-  </div>
-</div>
 		<!--************Single************-->
 
 		<div class="servicios">
