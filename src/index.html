@@ -3,38 +3,31 @@
 <meta charset="utf-8" />
 <head>
   <title>MetricArts - Inteligencia de negocios</title>
- 
- <script src="js/jquery-2.1.1.min.js"></script>
- <script src="js/jquery.combinedScroll.js"></script>
- <script src="js/jquery.scroll.svg.js"></script>
 </head>
  
 <body>
-<div id="inicio" class="header">
-  
-  <div class="header__menu page-navigation">
-  <div class="header__decorator">
-  </div>  
-    <div class="header__menu__logo">
-      </div> 
-        <nav class="header__menu__buttons">
-			<ul>
-				<li><a href="#inicio">Inicio</a></li>
-				<li><a href="#hacemos">Qué hacemos </a></li>
-				<li><a href="#quienes">Quiénes somos</a></li>
-				<li><a href="#blog">Blog</a></li>
-				<li><a href="#clientes">Clientes</a></li>
-				<li><a href="#contacto">Contacto</a></li>
-			</ul>
+	<div id="inicio" class="header">
+		<div class="header__menu page-navigation">
+			<div class="header__decorator">
+			</div>  
+			<div class="header__menu__logo">
+			</div> 
+			<nav class="header__menu__buttons">
+				<ul>
+					<li><a href="#inicio">Inicio</a></li>
+					<li><a href="#hacemos">Qué hacemos </a></li>
+					<li><a href="#quienes">Quiénes somos</a></li>
+					<li><a href="#blog">Blog</a></li>
+					<li><a href="#clientes">Clientes</a></li>
+					<li><a href="#contacto">Contacto</a></li>
+				</ul>
 
-        </nav>
-  </div>
-  
-  
-  
-</div>
-<div class="header__jumbotron">
-  </div>
+			</nav>
+		</div>
+	</div>
+
+	<div class="header__jumbotron">
+	</div>
 
 <!--************SERVICIOS************-->
 <div id="hacemos" class="servicios">
@@ -202,29 +195,30 @@
 		<div class="blog__header__button__decorator">
 		</div>
 	</div> <!-- blog__header -->
-	<div class="blog__post">
-		<div class="blog__post__thumbnail">
-		</div>
-		<div class="blog__post__desc">
-			<h2>Reconocimiento facial y seguimiento</h2>
-			<p>MetricArts, en alianza con las fuerzas del mal, etc.</p>
-		</div>
-		<div class="blog__post__more">
-			<a href="#">Ver más</a>
-		</div>
-	</div>
-	<div class="blog__post">
-		<div class="blog__post__thumbnail">
-		</div>
-		<div class="blog__post__desc">
-			<h2>Reconocimiento facial y seguimiento</h2>
-			<p>MetricArts, en alianza con las fuerzas del mal, etc.</p>
-		</div>
-		<div class="blog__post__more">
-			<a href="#">Ver más</a>
-		</div>
-        <div id="clientes"></div>
-	</div>
+
+	<?php
+		$args = array( 'numberposts' => '3' );
+		$recent_posts = wp_get_recent_posts( $args , OBJECT);
+		foreach( $recent_posts as $recent ){
+	?>
+			<div class="blog__post">
+				<div class="blog__post__thumbnail">
+					<?php echo get_the_post_thumbnail($recent); ?>
+				</div>
+				<div class="blog__post__desc">
+					<h2><?php echo get_the_title($recent); ?></h2>
+					<p><?php echo get_the_excerpt($recent); ?></p>
+				</div>
+				<div class="blog__post__more">
+					<a href="<?php echo get_the_permalink($recent); ?>">
+						Ver más
+					</a>
+				</div>
+			</div>
+	<?php
+		}
+		wp_reset_query();
+	?>
 </div>
 <div class="clientes">
 	<div class="clientes__header">
@@ -290,7 +284,7 @@
 		<div class="mini-menu">
 			<h2>Quiénes somos</h2>
 			<ul>
-				<li><a href="single.html">Nuestra empresa</a></li>
+				<li><a href="#">Nuestra empresa</a></li>
 				<li><a href="#">Nuestro equipo</a></li>
 				<li><a href="#">Socios</a></li>
 				<li><a href="#">Código de conducta</a></li>
@@ -339,9 +333,9 @@
 		</div>
 	</div>
 	<div class="contacto">
-		<p>Nueva Tajamar 555 Oficina 1501 / Las Condes - Santiago - Chile  <img src="/res/chile.png"></p> 
-		<p>Calle Miguel Dasso 134, Oficina 201, San Isidro - Lima - Perú  <img src="/res/peru.png"></p> 
-		<p>Marbella, Plaza New York, piso 1, oficina 101, Panama  <img src="/res/panama.png"></p> 
+		<p>Nueva Tajamar 555 Oficina 1501 / Las Condes - Santiago - Chile  <img src="res/chile.png"></p> 
+		<p>Calle Miguel Dasso 134, Oficina 201, San Isidro - Lima - Perú  <img src="res/peru.png"></p> 
+		<p>Marbella, Plaza New York, piso 1, oficina 101, Panama  <img src="res/panama.png"></p> 
         <br>
 		<p>Phone (56) (2) 2948 96 81 / (51) (1) 641 92 07 / (507) 65338150 / contacto@metricarts.com</p>
 	</div>
@@ -351,15 +345,14 @@
 	</div>
 </footer>
 
-<script src="bundle.js"></script>
-<!-- demo js -->
-
+<script src="index.js"></script>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/jquery.combinedScroll.js"></script>
+<script src="js/jquery.scroll.svg.js"></script>
 <script type="text/javascript">
 jQuery(document).ready(function($) {
- 
   // Hook up the current state to the nav bar
   $('.page-navigation').onePageNav();
-  
 });
 	
 $(window).load(function () {
@@ -382,6 +375,7 @@ $(window).load(function () {
 		transitionDuration: '4s',
         strokeWidth: '2'
 	});
+
     $('#visualizacion').ScrollSvg({
 		startSlack: 300,
 		stroke: '#fff',
