@@ -3,7 +3,7 @@
 <meta charset="utf-8" />
 <head>
   <title>MetricArts - Inteligencia de negocios</title>
- 
+  <link rel="icon" href="res/favicon.ico">
  <script src="js/jquery-2.1.1.min.js"></script>
  <script src="js/jquery.combinedScroll.js"></script>
  <script src="js/jquery.scroll.svg.js"></script>
@@ -12,7 +12,7 @@
 <body>
 <div id="inicio" class="header">
   
-  <div class="header__menu page-navigation">
+  <div class="header__menu">
   <div class="header__decorator">
   </div>  
     <div class="header__menu__logo">
@@ -358,7 +358,7 @@
 jQuery(document).ready(function($) {
  
   // Hook up the current state to the nav bar
-  $('.page-navigation').onePageNav();
+  $('.header__menu').onePageNav();
   
 });
 	
