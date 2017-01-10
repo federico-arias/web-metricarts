@@ -1,0 +1,78 @@
+@import "~susy/sass/susy";
+@import "colors";
+
+$susy: (
+  columns: 6,
+  gutters: 1/8,
+  math:fluid,
+  container: 960px,
+);
+.title__comment {
+    font-size: 22px;
+    color: $primary;
+    padding-left: 10%;
+    padding-top:20px;
+    font-family: raleway;
+}
+
+.comment {
+    width: 600px;
+    height: 100px;
+    margin-left: 10%;
+    padding-right: auto;
+    margin-top:40px;
+    background-color: $primary;   
+}
+.comment__image {
+    background-color: $terciary;
+    height:75px;
+    width: 75px;
+    float: left; 
+    margin: 10px;
+}
+.comment__decorator__text {
+    height:40px;
+    width: 80%;
+    float: right;
+    color:white; 
+    font-family: raleway light;
+    font-size: 14px;
+    padding-top: 5px;
+}
+.comment__decorator__text__author {
+    width: 80%;
+    float: right;
+    color:white; 
+    font-family: raleway italic;
+    font-size: 11px;
+    padding-top: 10px;
+}
+.comment__decorator__text__data {
+    width: 80%;
+    float: right;
+    color:white; 
+    font-family: raleway light;
+    font-weight: 200;
+    font-size: 10px;
+    padding-top: 5px;
+}
+.comment__decorator__up__text {
+    background-color: $quaternary;
+    height:5px;
+    width: 100%;
+}
+@include susy-breakpoint(1024px, 3) {
+
+  @include nested(3) {
+	.single {
+        @include container();
+  }
+  .single__illustration {
+    @include span(2 firts);
+  }
+  
+  .single__sidebar {
+      @include span(1 last)
+  }
+  }
+}
