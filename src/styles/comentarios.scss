@@ -7,12 +7,13 @@ $susy: (
   math:fluid,
   container: 960px,
 );
+
 .title__comment {
     font-size: 22px;
     color: $primary;
     padding-left: 10%;
     padding-top:20px;
-    font-family: raleway;
+    font-family: "Raleway";
 }
 
 .comment {
@@ -35,7 +36,7 @@ $susy: (
     width: 80%;
     float: right;
     color:white; 
-    font-family: raleway light;
+    font-family: "Raleway";
     font-size: 14px;
     padding-top: 5px;
 }
@@ -43,7 +44,7 @@ $susy: (
     width: 80%;
     float: right;
     color:white; 
-    font-family: raleway italic;
+    font-family: "Raleway";
     font-size: 11px;
     padding-top: 10px;
 }
@@ -51,7 +52,7 @@ $susy: (
     width: 80%;
     float: right;
     color:white; 
-    font-family: raleway light;
+    font-family: "Raleway";
     font-weight: 200;
     font-size: 10px;
     padding-top: 5px;
@@ -61,6 +62,7 @@ $susy: (
     height:5px;
     width: 100%;
 }
+
 @include susy-breakpoint(1024px, 3) {
 
   @include nested(3) {

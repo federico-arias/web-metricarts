@@ -4,9 +4,7 @@
 <head>
   <title>MetricArts - Inteligencia de negocios</title>
   <link rel="icon" href="res/favicon.ico">
-	 <script src="js/jquery-2.1.1.min.js"></script>
-	 <script src="js/jquery.combinedScroll.js"></script>
-	 <script src="js/jquery.scroll.svg.js"></script>
+  <!-- <link rel="stylesheet" href="<?php echo  get_stylesheet_directory_uri() . '/style.css'; ?>" /> -->
 </head>
  
 <body>
@@ -155,38 +153,40 @@
 
 	<div class="nosotros__text">
 		<p>
-	Somos un equipo de profesionales capacitados para enfrentar los nuevos desafíos que los mercados deben resolver. Comprometidos con la investigación y el desarrollo de servicios innovadores a problemas reales, entregando las herramientas y el soporte necesario para apoyar la toma de decisiones de nuestros clientes. Entregamos una nueva forma de servicio y un producto único. Pertenecer a Metric Arts es sellar año a año un compromiso a expandir los horizontes establecidos.
+		Somos un equipo de profesionales capacitados para enfrentar los nuevos desafíos que los mercados deben resolver. Comprometidos con la investigación y el desarrollo de servicios innovadores a problemas reales, entregando las herramientas y el soporte necesario para apoyar la toma de decisiones de nuestros clientes. Entregamos una nueva forma de servicio y un producto único. Pertenecer a Metric Arts es sellar año a año un compromiso a expandir los horizontes establecidos.
 		</p>
-        </br>
-        <P> Nos especializamos en el desarrollo e implementación de proyectos de inteligencia de negocios, entregando soluciones analíticas y tecnológicas que apoyen los procesos de toma de decisión en las organizaciones.</P>
-        <p> Para ello contamos con un equipo humano altamente comprometido y capacitado, dedicado también a la docencia, la investigación y a la permanente innovación, lo cual nos permite ofrecer metodologías, buenas prácticas y soluciones que se encuentran en el estado del arte de la gestión de información y del conocimiento corporativo.</p>
-    </div>
-    <div class="nosotros__decorator__text"></div> 
-    
-    <div class="cards">
-      <div class="nosotros__images">
-      <div class="nosotros__imagesa">
-      <div class="card effect__hover">
-       <div class="card__front">
-            <img src="res/img_jaime.jpg"> </img>
-        </div>
-        <div class="card__back">
-              <img src="res/jaime_back.jpg"> </img>
-            </div>
-     </div>
-     </div>
-      <div class="nosotros__imagesb">
-     <div class="card effect__hover">
-       <div class="card__front">
-        <img src="res/img_pato.jpg"><img>
-	   </div>
-       <div class="card__back">
-              <img src="res/pato_back.jpg"> </img>
-            </div>
-     </div>
-     </div>
-    </div>
-    </div>
+		</br>
+		<P> Nos especializamos en el desarrollo e implementación de proyectos de inteligencia de negocios, entregando soluciones analíticas y tecnológicas que apoyen los procesos de toma de decisión en las organizaciones.</P>
+		<p> Para ello contamos con un equipo humano altamente comprometido y capacitado, dedicado también a la docencia, la investigación y a la permanente innovación, lo cual nos permite ofrecer metodologías, buenas prácticas y soluciones que se encuentran en el estado del arte de la gestión de información y del conocimiento corporativo.</p>
+	</div>
+	<div class="nosotros__decorator__text"></div> 
+
+	<div class="cards">
+		<div class="nosotros__images">
+			<div class="nosotros__imagesa">
+				<div class="card effect__hover">
+					<div class="card__front">
+						<img src="res/img_jaime.jpg"> </img>
+					</div>
+					<div class="card__back">
+						<img src="res/jaime_back.jpg"> </img>
+					</div>
+				</div>
+			</div>
+			<div class="nosotros__imagesb">
+				<div class="card effect__hover">
+					<div class="card__front">
+						<img src="res/img_pato.jpg"><img>
+					</div>
+					<div class="card__back">
+						<img src="res/pato_back.jpg"> </img>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div  id="blog" class="blog">
 	<div class="blog__header">
 		<div class="blog__header__top_decorator">
@@ -348,52 +348,6 @@
 	</div>
 </footer>
 
-<script src="index.js"></script>
-<script src="js/jquery-2.1.1.min.js"></script>
-<script src="js/jquery.combinedScroll.js"></script>
-<script src="js/jquery.scroll.svg.js"></script>
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-  // Hook up the current state to the nav bar
-<<<<<<< HEAD
-  $('.page-navigation').onePageNav();
-=======
-  $('.header__menu').onePageNav();
-  
->>>>>>> master
-});
-	
-$(window).load(function () {
-
-	$('#analytics').ScrollSvg({
-		startSlack: 300,
-		stroke: '#fff',
-		transitionDuration: '4s',
-        strokeWidth: '2'
-	});
-    $('#datawarehouse').ScrollSvg({
-		startSlack: 300,
-		stroke: '#fff',
-		transitionDuration: '4s',
-        strokeWidth: '2'
-	});
-    $('#business').ScrollSvg({
-		startSlack: 300,
-		stroke: '#fff',
-		transitionDuration: '4s',
-        strokeWidth: '2'
-	});
-
-    $('#visualizacion').ScrollSvg({
-		startSlack: 300,
-		stroke: '#fff',
-		transitionDuration: '4s',
-        strokeWidth: '2'
-	});
-
-
-});
-</script>
-
+<script src="<?php echo get_stylesheet_directory_uri() . '/index.js' ?>"></script>
 </body>
 </html>

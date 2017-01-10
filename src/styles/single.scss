@@ -6,13 +6,12 @@ $susy: (
   gutters: 1/8,
   math:fluid,
   container: 960px,
-  debug:(image:show),
 );
 
 .header__jumbotron__single {
   width:100%;
   height:280px;
-  background: url(/res/jumbotronsingle.jpg) no-repeat;
+  background: url(../res/jumbotronsingle.jpg) no-repeat;
   background-size: cover;
   background-position:center;
 }
@@ -27,7 +26,7 @@ $susy: (
     height:100%;
     width: 20%;
     float: right;
-    margin-bottom:20px;
+    margin-bottom:180px;
 }
 .single__post {
     background-color: $primary;
@@ -64,7 +63,7 @@ $susy: (
 }
     
 .single__illustration {
-	background-image: url('/res/single_image.jpg');
+	background-image: url('../res/single_image.jpg');
 	background-repeat:no-repeat;
 	height:350px;
     width: 25%;

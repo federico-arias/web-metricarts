@@ -10,12 +10,11 @@ var extractHTML = n('[name]' + ext);
 
 module.exports = {
 	entry: {
-		single:'./src/single.js',
-		//comments:'./src/comments.js',
-		index:'./src/index.js'
+		index: ['./src/index.js'],
+		single: './src/single.js'
 	},
 	output: {
-		publicPath: env === 'prod' ? "/wp-content/themes/theme/" : "./",
+		publicPath: env === 'prod' ? "/~federico/wp-metric/wp-content/themes/theme/" : "./",
 		path: __dirname + "/target",
 		filename: '[name].js'
 	},
@@ -57,14 +56,13 @@ module.exports = {
 	},
 	plugins: [
 		//extractCSS,
-		extractHTML
-		/*,
+		extractHTML /*,
 		new HtmlWebpackPlugin({
 			title: '[name]',
 			filename: '[name].html',
 			template: 'src/index.html'
 		})
-		*/
+	   	*/
 	],
 	devServer: {
 		contentBase: 'target/'
