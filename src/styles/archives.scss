@@ -1,0 +1,103 @@
+@import "~susy/sass/susy";
+@import "colors";
+
+$susy: (
+  columns: 6,
+  gutters: 1/8,
+  math:fluid,
+  container: 960px,
+);
+.title {
+    font-size: 30px;
+    color: $font-color;
+    padding-left: 10%;
+    padding-top:30px;
+    font-family: raleway;
+    font-weight: 600;
+}
+.title__archives {
+    font-size: 24px;
+    color: $primary;
+    padding-left: 10px;
+    margin-left:10px;
+    padding-top:10px;
+    font-family: raleway;
+    font-weight: 500;
+}
+
+.archives {
+    width: auto;
+    height: 200px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top:40px;
+    background-color: $terciary;   
+}
+.archives__image {
+    background-color: $secondary;
+    height:100px;
+    width: 100px;
+    float: left; 
+    margin: 25px;
+}
+.archives__decorator__text {
+    height:40px;
+    width: 85%;
+    float: right;
+    color:white; 
+    font-family: raleway light;
+    font-size: 16px;
+    padding-top:10px;
+}
+
+.archives__decorator__text__data {
+    width: 85%;
+    float: right;
+    color:white; 
+    font-family: raleway light;
+    font-weight: 200;
+    font-size: 12px;
+    padding-top: 10px;
+}
+.archives__decorator__up__text {
+    background-color: $quaternary;
+    height:auto;
+    width: 100%;
+}
+
+.archives__readmore a:link, 
+.archives__readmore a {
+	text-decoration:none;
+	font-size:18px;
+	color:inherit;
+}
+.archives__readmore a:hover,  {
+	text-decoration:none;
+	font-size:18px;
+	color:$quaternary;
+    
+}
+.archives__readmore {
+	margin-top:40px;
+	text-align:right;
+    font-family: raleway;
+    float:right;
+    color: $gris;
+    padding-right: 10%;
+}
+
+@include susy-breakpoint(1024px, 3) {
+
+  @include nested(3) {
+	.single {
+        @include container();
+  }
+  .single__illustration {
+    @include span(2 firts);
+  }
+  
+  .single__sidebar {
+      @include span(1 last)
+  }
+  }
+}
