@@ -8,6 +8,11 @@ $susy: (
   container: 960px,
 );
 
+path {
+	stroke-width: 2;
+	stroke:#fff;
+}
+
 .servicios {
   font-family:"Raleway", sans-serif;
   color:$text;

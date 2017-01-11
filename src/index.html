@@ -6,7 +6,6 @@
   <link rel="icon" href="res/favicon.ico">
   <!-- <link rel="stylesheet" href="<?php echo  get_stylesheet_directory_uri() . '/style.css'; ?>" /> -->
 </head>
- 
 <body>
 	<div id="inicio" class="header">
 		<div class="header__menu page-navigation">
@@ -16,12 +15,12 @@
 			</div> 
 			<nav class="header__menu__buttons">
 				<ul>
-					<li><a href="#inicio">Inicio</a></li>
-					<li><a href="#hacemos">Qué hacemos </a></li>
-					<li><a href="#quienes">Quiénes somos</a></li>
-					<li><a href="#blog">Blog</a></li>
-					<li><a href="#clientes">Clientes</a></li>
-					<li><a href="#contacto">Contacto</a></li>
+					<li><a id="inicio-mnu" href="#inicio">Inicio</a></li>
+					<li><a id="hacemos-mnu" href="#hacemos">Qué hacemos </a></li>
+					<li><a id="quienes-mnu" href="#quienes">Quiénes somos</a></li>
+					<li><a id="blog-mnu" href="#blog">Blog</a></li>
+					<li><a id="clientes-mnu" href="#clientes">Clientes</a></li>
+					<li><a id="contacto-mnu" href="#contacto">Contacto</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -48,7 +47,7 @@
 		<div class="servicios__ba__illustration">
                <div id="target">
 		<div class="wrap">
-			<object id="analytics" data="svg/caballito.svg" type="image/svg+xml"></object>
+			<object id="analytics" data="<?php echo get_stylesheet_directory_uri() . '/svg/caballito.svg' ?>" type="image/svg+xml"></object>
 		</div>
  	</div>
         </div>
@@ -86,7 +85,7 @@
 		<div class="servicios__bi__illustration">
             <div id="target">
 		<div class="wrap">
-			<object id="business" data="svg/business.svg" type="image/svg+xml"></object>
+			<object id="business" data="<?php echo get_stylesheet_directory_uri() . '/svg/business.svg' ?>"  type="image/svg+xml"></object>
 		</div>
  	</div> 
 		</div>
@@ -109,7 +108,7 @@
 		<div class="servicios__id__illustration">
         <div id="target">
 		<div class="wrap">
-			<object id="datawarehouse" data="svg/datawarehouse.svg" type="image/svg+xml"></object>
+			<object id="datawarehouse" data="<?php echo get_stylesheet_directory_uri() . '/svg/datawarehouse.svg' ?>" type="image/svg+xml"></object>
 		</div>
  	</div> 
 		</div>
@@ -132,7 +131,7 @@
 		<div class="servicios__vdi__illustration">
         <div id="target">
 		<div class="wrap">
-			<object id="visualizacion" data="svg/visualizacion.svg" type="image/svg+xml"></object>
+			<object id="visualizacion" data="<?php echo get_stylesheet_directory_uri() . '/svg/visualizacion.svg' ?>" type="image/svg+xml"></object>
 		</div>
  	</div> 
 	  </div>
@@ -206,7 +205,13 @@
 	?>
 			<div class="blog__post">
 				<div class="blog__post__thumbnail">
-					<?php echo get_the_post_thumbnail($recent); ?>
+					<?php 
+				 if (has_post_thumbnail($recent)){
+					echo get_the_post_thumbnail($recent); 
+				 } else {
+					echo "foo";
+				 }
+					?>
 				</div>
 				<div class="blog__post__desc">
 					<h2><?php echo get_the_title($recent); ?></h2>
@@ -223,7 +228,7 @@
 		wp_reset_query();
 	?>
 </div>
-<div class="clientes">
+<div id="clientes" class="clientes">
 	<div class="clientes__header">
 		<div class="clientes__header__top_decorator">
 		</div>

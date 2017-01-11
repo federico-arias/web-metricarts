@@ -55,6 +55,23 @@ $susy: (
     height:2px;
     width: 100%;
 }
+
+.single__sidebar > li > a {
+	color:white;
+	text-decoration:none;
+	font-size:10px;
+}
+
+.single__sidebar > li {
+	list-style-position: inside;
+	padding-left: 10px;
+	margin: 10px;
+}
+
+.single__sidebar > li > a:hover {
+	text-decoration:underline;
+}
+
 .single__icons{
     display: inline;
     padding-top: 15px;
@@ -100,4 +117,8 @@ $susy: (
       @include span(1 last)
   }
   }
+	.single__text__description p {
+		padding-bottom:20px;
+		padding-right:20px;
+	}
 }

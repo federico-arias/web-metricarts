@@ -7,7 +7,7 @@
   "scripts": {
     "start": "npm run develop && webpack-dev-server -d --progress --colors",
     "develop": "cross-env NODE_ENV=html webpack",
-    "wordpress": "cross-env NODE_ENV=prod webpack"
+    "wordpress": "cross-env NODE_ENV=prod webpack --watch"
   },
   "author": "federico-arias <federicoariasr@gmail.com>",
   "license": "ISC",
@@ -34,6 +34,8 @@
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
-    "jquery": "^3.1.1"
+    "draw-svg-path": "github:michaelrhodes/draw-svg-path",
+    "jquery": "^3.1.1",
+    "parse-svg-path": "^0.1.2"
   }
 }
