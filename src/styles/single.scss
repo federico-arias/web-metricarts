@@ -95,12 +95,12 @@ $susy: (
     padding-right: 40px; 
 }
 .single__text__date {
-    Padding: 15px 5px;
+    padding: 15px 5px;
     font-size: 12px;
 }
 
 .single__text__title {
-    Padding: 15px 5px;
+    padding: 15px 5px;
 }
 
 @include susy-breakpoint(1024px, 3) {

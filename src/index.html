@@ -198,34 +198,32 @@
 		</div>
 	</div> <!-- blog__header -->
 
+<?php 
+	$the_query = new WP_Query( array('posts_per_page' => '5')); 
+	while ($the_query -> have_posts()) : $the_query -> the_post(); 
+
+	echo "<div class='blog__post'>";
+	echo "<div class='blog__post__thumbnail'>";
+	 if (has_post_thumbnail()): 
+		echo the_post_thumbnail('thumbnail'); 
+	 else: 
+		echo "foo";
+	 endif;
+?>
+	</div>
+	<div class="blog__post__desc">
+		<h2><?php echo get_the_title(); ?></h2>
+		<p><?php echo get_the_excerpt(); ?></p>
+	</div>
+	<div class="blog__post__more">
+		<a href="<?php echo get_the_permalink(); ?>">
+			Ver más
+		</a>
+	</div>
+</div>
 	<?php
-		$args = array( 'numberposts' => '3' );
-		$recent_posts = wp_get_recent_posts( $args , OBJECT);
-		foreach( $recent_posts as $recent ){
-	?>
-			<div class="blog__post">
-				<div class="blog__post__thumbnail">
-					<?php 
-				 if (has_post_thumbnail($recent)){
-					echo get_the_post_thumbnail($recent); 
-				 } else {
-					echo "foo";
-				 }
-					?>
-				</div>
-				<div class="blog__post__desc">
-					<h2><?php echo get_the_title($recent); ?></h2>
-					<p><?php echo get_the_excerpt($recent); ?></p>
-				</div>
-				<div class="blog__post__more">
-					<a href="<?php echo get_the_permalink($recent); ?>">
-						Ver más
-					</a>
-				</div>
-			</div>
-	<?php
-		}
-		wp_reset_query();
+		endwhile;
+		wp_reset_postdata();
 	?>
 </div>
 <div id="clientes" class="clientes">
