@@ -1,33 +1,6 @@
-<!doctype html>
-<html>
-<meta charset="utf-8" />
-<head>
-  <title>MetricArts - Inteligencia de negocios</title>
-  <link rel="icon" href="res/favicon.ico">
-  <!-- <link rel="stylesheet" href="<?php echo  get_stylesheet_directory_uri() . '/style.css'; ?>" /> -->
-</head>
-<body>
-	<div id="inicio" class="header">
-		<div class="header__menu page-navigation">
-			<div class="header__decorator">
-			</div>  
-			<div class="header__menu__logo">
-			</div> 
-			<nav class="header__menu__buttons">
-				<ul>
-					<li><a id="inicio-mnu" href="#inicio">Inicio</a></li>
-					<li><a id="hacemos-mnu" href="#hacemos">Qué hacemos </a></li>
-					<li><a id="quienes-mnu" href="#quienes">Quiénes somos</a></li>
-					<li><a id="blog-mnu" href="#blog">Blog</a></li>
-					<li><a id="clientes-mnu" href="#clientes">Clientes</a></li>
-					<li><a id="contacto-mnu" href="#contacto">Contacto</a></li>
-				</ul>
-			</nav>
-		</div>
-	</div>
-
-	<div class="header__jumbotron">
-	</div>
+<?php get_header(); ?>
+<div class="header__jumbotron">
+</div>
 
 <!--************SERVICIOS************-->
 <div id="hacemos" class="servicios">
@@ -165,20 +138,20 @@
 			<div class="nosotros__imagesa">
 				<div class="card effect__hover">
 					<div class="card__front">
-						<img src="res/img_jaime.jpg"> </img>
+						<img src="<?php echo get_stylesheet_directory_uri() . '/res/img_jaime.jpg' ?>"> </img>
 					</div>
 					<div class="card__back">
-						<img src="res/jaime_back.jpg"> </img>
+						<img src="<?php echo get_stylesheet_directory_uri() . '/res/jaime_back.jpg' ?>"> </img>
 					</div>
 				</div>
 			</div>
 			<div class="nosotros__imagesb">
 				<div class="card effect__hover">
 					<div class="card__front">
-						<img src="res/img_pato.jpg"><img>
+						<img src="<?php echo get_stylesheet_directory_uri() . '/res/img_pato.jpg' ?>"></img>
 					</div>
 					<div class="card__back">
-						<img src="res/pato_back.jpg"> </img>
+						<img src="<?php echo get_stylesheet_directory_uri() . '/res/pato_back.jpg' ?>"> </img>
 					</div>
 				</div>
 			</div>
@@ -199,20 +172,31 @@
 	</div> <!-- blog__header -->
 
 <?php 
-	$the_query = new WP_Query( array('posts_per_page' => '5')); 
-	while ($the_query -> have_posts()) : $the_query -> the_post(); 
+$lastposts = get_posts( array(
+    'numberposts' => 3
+) );
+  
+	foreach( $lastposts as $p ) {
+		update_post_thumbnail_cache();
+		setup_postdata( $p ); 
+		echo "<div class='blog__post'>";
+		echo "<div class='blog__post__thumbnail'>";
+		setup_postdata( $p ); 
+	
+		if (get_the_post_thumbnail_url( $p->ID ) == true){ 
 
-	echo "<div class='blog__post'>";
-	echo "<div class='blog__post__thumbnail'>";
-	 if (has_post_thumbnail()): 
-		echo the_post_thumbnail('thumbnail'); 
-	 else: 
-		echo "foo";
-	 endif;
-?>
+			echo get_the_post_thumbnail( $p->ID, 'thumbnail', array( 'style' => 'object-fit:cover' ) );
+
+		}
+		else {
+
+	?>
+		<img src="<?php echo get_stylesheet_directory_uri() . '/res/single_thumbnail.png' ?>" class='attachment-thumbnail size-thumbnail wp-post-image' height='150' width='100%'>
+	 <?php } ?>
 	</div>
 	<div class="blog__post__desc">
-		<h2><?php echo get_the_title(); ?></h2>
+		<h2><?php echo $p->post_title;  ?></h2>
+
 		<p><?php echo get_the_excerpt(); ?></p>
 	</div>
 	<div class="blog__post__more">
@@ -222,10 +206,12 @@
 	</div>
 </div>
 	<?php
-		endwhile;
-		wp_reset_postdata();
+
+	 }
+wp_reset_postdata();		
 	?>
 </div>
+
 <div id="clientes" class="clientes">
 	<div class="clientes__header">
 		<div class="clientes__header__top_decorator">
@@ -283,74 +269,4 @@
 		</div>
 	</div>
 </div>
-<footer>
-    <div class="footer__header__decorator">
-    </div>
-	<div class="mini-menus">
-		<div class="mini-menu">
-			<h2>Quiénes somos</h2>
-			<ul>
-				<li><a href="#">Nuestra empresa</a></li>
-				<li><a href="#">Nuestro equipo</a></li>
-				<li><a href="#">Socios</a></li>
-				<li><a href="#">Código de conducta</a></li>
-			</ul>
-		</div>
-		<div class="mini-menu">
-			<h2>Qué hacemos</h2>
-			<ul>
-				<li><a href="#">Proyectos BI</a></li>
-				<li><a href="#">Productos Analíticos</a></li>
-				<li><a href="#">Visualización de datos</a></li>
-				<li><a href="#">Consultoría</a></li>
-			</ul>
-		</div>
-		<div class="mini-menu">
-			<h2>Clientes</h2>
-			<ul>
-				<li><a href="#">Banca & servicios financieros</a></li>
-				<li><a href="#">Retail</a></li>
-				<li><a href="#">Telecomunicaciones</a></li>
-				<li><a href="#">Producción</a></li>
-			</ul>
-		</div>
-		<div class="mini-menu">
-			<h2>Blog</h2>
-			<ul>
-				<li><a href="#">Columnas</a></li>
-				<li><a href="#">Noticias</a></li>
-			</ul>
-		</div>
-		<div class="mini-menu">
-			<h2>Contacto</h2>
-			<ul>
-				<li><a href="#">Chile</a></li>
-				<li><a href="#">Perú</a></li>
-				<li><a href="#">Panamá</a></li>
-			</ul>
-		</div>
-		<div class="mini-menu">
-			<h2>Holding</h2>
-			<ul>
-				<li><a href="http://www.processarts.cl/">ProcessArts</a></li>
-				<li><a href="http://www.metriclearning.cl/">MetricLearning</a></li>
-				<li><a href="#">Data Science Spa</a></li>
-			</ul>
-		</div>
-	</div>
-	<div class="contacto">
-		<p>Nueva Tajamar 555 Oficina 1501 / Las Condes - Santiago - Chile  <img src="res/chile.png"></p> 
-		<p>Calle Miguel Dasso 134, Oficina 201, San Isidro - Lima - Perú  <img src="res/peru.png"></p> 
-		<p>Marbella, Plaza New York, piso 1, oficina 101, Panama  <img src="res/panama.png"></p> 
-        <br>
-		<p>Phone (56) (2) 2948 96 81 / (51) (1) 641 92 07 / (507) 65338150 / contacto@metricarts.com</p>
-	</div>
-	<div class="copyright">
-		<p>Copyright © 2016 Metric Arts, Inc.</p>
-		<p>Todos los derechos reservados.</p>
-	</div>
-</footer>
-
-<script src="<?php echo get_stylesheet_directory_uri() . '/index.js' ?>"></script>
-</body>
-</html>
+<?php get_footer(); ?>

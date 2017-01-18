@@ -1,4 +1,4 @@
-@import "~susy/sass/susy";
+@import "../../node_modules/susy/sass/susy";
 @import "colors";
 
 $susy: (
@@ -20,7 +20,7 @@ path {
 
 .servicios__header {
   height:100px;
-  background-image: url('../res/img_botonera.jpg');
+  background-image: url('res/img_botonera.jpg');
 }
 
 .servicios__header__top_decorator {
@@ -54,21 +54,21 @@ path {
 }
 
 .servicios__ba__illustration {
-	background-image: url('../res/img1.png');
+	background-image: url('res/img1.png');
 	background-repeat:no-repeat;
 	background-size:contain;
 	height:285px;
     margin-top: 60px;
 }
 .servicios__id__illustration {
-	background-image: url('../res/img1.png');
+	background-image: url('res/img1.png');
 	background-repeat:no-repeat;
 	background-size:contain;
 	height:285px;
    margin-top: 60px;
 }
 .servicios__vdi__illustration {
-	background-image: url('../res/img1.png');
+	background-image: url('res/img1.png');
 	background-repeat:no-repeat;
 	background-size:contain;
 	height:285px;
@@ -136,7 +136,7 @@ path {
 }
 	
 .servicios__bi__illustration {
-	background-image: url('../res/img1.png');
+	background-image: url('res/img1.png');
 	background-repeat:no-repeat;
 	height:285px;
 	background-size:contain;

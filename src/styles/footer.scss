@@ -1,4 +1,4 @@
-@import "~susy/sass/susy";
+@import "../../node_modules/susy/sass/susy";
 @import "colors";
 
 footer {
@@ -11,7 +11,7 @@ footer {
 						cadetblue 93%,
 						cadetblue 94%,
 						transparent 94%),
-		url('../res/footer.jpg');
+		url('res/footer.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	margin-top:95px;
@@ -39,6 +39,7 @@ footer li {
 
 .mini-menus {
 	margin-top:66px;
+	text-align:center;
 }
 
 .mini-menu h2 {
@@ -68,9 +69,9 @@ img{
 
 
 
-@include nested(6) {
+@include nested(3) {
 	.mini-menus {
-		@include container(6);
+		@include container(3);
 	}
 
 	.mini-menus .mini-menu {

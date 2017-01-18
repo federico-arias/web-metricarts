@@ -7,7 +7,7 @@
 					<ul>
 <?php
 $opts= array(
-	'child_of'=> 10118,
+	'child_of'=> 9815,
 	'title_li' => NULL
 );
 wp_list_pages( $opts );
@@ -57,6 +57,6 @@ wp_reset_postdata();
 			</div>
 		</footer>
 
-		<script src="<?php echo get_stylesheet_directory_uri() . '/index.js'; ?>"></script>
+		<script src="<?php echo get_stylesheet_directory_uri() . '/main.js'; ?>"></script>
 		</body>
 </html>

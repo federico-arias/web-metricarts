@@ -1,6 +1,6 @@
-import './styles/main.scss';
-import './index.html';
-import './fonts/RaspoutineClassic.scss';
+//import './styles/main.scss';
+//import './index.html';
+//import './fonts/RaspoutineClassic.scss';
 import './cards.js';
 
 /*var fc = require('./demo.js');
